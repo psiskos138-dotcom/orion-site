@@ -221,13 +221,49 @@
 
 /* RESPONSIVE */
 @media (max-width: 860px) {
-  .provision {
-    grid-template-columns: 44px 1fr;
-    gap: 0 20px;
+  .doc-header {
+    padding: 20px 24px 0;
+    flex-direction: column;
+    gap: 4px;
   }
-  .execution {
-    grid-template-columns: 44px 1fr;
-    gap: 0 20px;
-  }
+
   .doc-status { display: none; }
+
+  .lockup-wrap {
+    padding: 36px 24px 0 24px;
+  }
+
+  .wordmark {
+    font-size: clamp(44px, 13vw, 72px);
+    letter-spacing: 0.12em;
+    margin-right: -0.12em;
+  }
+
+  .sub-row {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .provisions {
+    padding: 0 24px;
+    margin-top: 48px;
+  }
+
+  .provision {
+    grid-template-columns: 40px 1fr;
+    gap: 0 16px;
+    padding: 20px 0;
+  }
+
+  .execution {
+    padding: 0 24px;
+    margin-top: 48px;
+    grid-template-columns: 40px 1fr;
+    gap: 0 16px;
+  }
+
+  .colophon {
+    padding: 20px 24px 0;
+    margin-top: 48px;
+  }
 }
