@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #0A0A0A;
+  --red: #C8000A;
+  --dim: #888;
+  --faint: #EBEBEB;
+  --ml: 120px;
+  --mr: 56px;
+  --helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --garamond: 'EB Garamond', Georgia, 'Times New Roman', serif;
+}
+
+html, body {
+  background: #fff;
+  color: var(--black);
+  font-family: var(--helvetica);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@media (max-width: 860px) {
+  :root {
+    --ml: 24px;
+    --mr: 24px;
+  }
+}

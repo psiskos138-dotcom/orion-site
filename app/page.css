@@ -1,0 +1,233 @@
+/* CURTAIN */
+.curtain {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 50;
+  pointer-events: none;
+  transition: opacity 0.9s ease;
+}
+.curtain.gone { opacity: 0; }
+
+/* DOCUMENT */
+.doc { padding-bottom: 72px; }
+
+/* HEADER */
+.doc-header {
+  padding: 22px var(--mr) 0 var(--ml);
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.doc-header.show { opacity: 1; }
+
+.doc-ref {
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+  line-height: 2;
+}
+
+.doc-status {
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-align: right;
+  line-height: 2;
+}
+.doc-status .live { color: var(--red); }
+
+/* LOCKUP */
+.lockup-wrap { padding: 64px var(--mr) 0 var(--ml); }
+
+.rs-1 { width: 100%; height: 3px; background: var(--black); }
+.rs-2 {
+  height: 1.5px;
+  background: var(--black);
+  opacity: 0.18;
+  margin-top: 9px;
+  width: 0;
+  transition: width 0.55s ease 0.1s;
+}
+.rs-3 {
+  height: 2.5px;
+  background: var(--red);
+  margin-top: 9px;
+  width: 0;
+  transition: width 0.55s ease 0.2s;
+}
+.rs-2.show { width: 71%; }
+.rs-3.show { width: 42.5%; }
+
+.wordmark {
+  font-size: clamp(72px, 15vw, 200px);
+  font-weight: 700;
+  letter-spacing: 0.52em;
+  line-height: 0.88;
+  color: var(--black);
+  text-transform: uppercase;
+  display: block;
+  margin-right: -0.52em;
+  margin-top: 18px;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.wordmark.show { opacity: 1; }
+
+.sub-row {
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.sub-row.show { opacity: 1; }
+
+.sub-tl {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--dim);
+  font-weight: 400;
+}
+
+.sub-llc {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.sub-llc.show { opacity: 1; }
+
+.lockup-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--faint);
+  margin-top: 11px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.lockup-rule.show { opacity: 1; }
+
+/* PROVISIONS */
+.provisions {
+  padding: 0 var(--mr) 0 var(--ml);
+  margin-top: 72px;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.provisions.show { opacity: 1; }
+
+.provision {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0 36px;
+  border-top: 1px solid var(--faint);
+  padding: 32px 0;
+}
+.provision:last-child { border-bottom: 1px solid var(--faint); }
+
+.prov-num {
+  font-family: var(--garamond);
+  font-size: 11px;
+  color: var(--red);
+  padding-top: 2px;
+  font-style: italic;
+}
+
+.prov-body {
+  font-family: var(--garamond);
+  font-size: 15px;
+  line-height: 1.82;
+  color: var(--black);
+}
+.prov-body em { font-style: italic; }
+
+.dt {
+  font-family: var(--helvetica);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+/* EXECUTION */
+.execution {
+  padding: 0 var(--mr) 0 var(--ml);
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0 36px;
+  opacity: 0;
+  transition: opacity 0.7s ease 0.1s;
+}
+.execution.show { opacity: 1; }
+
+.exec-label {
+  font-family: var(--garamond);
+  font-size: 11px;
+  color: #999;
+  font-style: italic;
+  padding-top: 2px;
+}
+
+.exec-email {
+  display: inline-block;
+  font-family: var(--garamond);
+  font-size: 15px;
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px solid var(--black);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.exec-email:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+/* COLOPHON */
+.colophon {
+  padding: 28px var(--mr) 0 var(--ml);
+  border-top: 1px solid var(--faint);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 80px;
+  opacity: 0;
+  transition: opacity 0.7s ease 0.2s;
+}
+.colophon.show { opacity: 1; }
+
+.col-l {
+  font-family: var(--garamond);
+  font-size: 11px;
+  font-style: italic;
+  color: #888;
+}
+.col-r {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .provision {
+    grid-template-columns: 44px 1fr;
+    gap: 0 20px;
+  }
+  .execution {
+    grid-template-columns: 44px 1fr;
+    gap: 0 20px;
+  }
+  .doc-status { display: none; }
+}
