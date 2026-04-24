@@ -294,50 +294,47 @@
 .access-doc-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  padding: 6px 0;
 }
 
 .access-toggle {
   position: relative;
-  width: 36px;
-  height: 20px;
+  width: 48px;
+  height: 26px;
   flex-shrink: 0;
-}
-
-.access-toggle input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  position: absolute;
-}
-
-.access-toggle-track {
-  position: absolute;
-  inset: 0;
-  background: var(--faint);
-  border-radius: 10px;
+  background: #D8D8D8;
+  border: none;
+  border-radius: 13px;
   cursor: pointer;
-  transition: background 0.2s;
+  padding: 0;
+  transition: background 0.18s;
 }
 
-.access-toggle input:checked + .access-toggle-track {
+.access-toggle--on {
   background: var(--black);
 }
 
-.access-toggle-track::after {
-  content: '';
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  border-radius: 50%;
-  transition: transform 0.2s;
+.access-toggle--pending {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
-.access-toggle input:checked + .access-toggle-track::after {
-  transform: translateX(16px);
+.access-toggle-thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.18s;
+  pointer-events: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+}
+
+.access-toggle--on .access-toggle-thumb {
+  transform: translateX(22px);
 }
 
 .access-doc-name {

@@ -15,11 +15,30 @@ interface Doc {
   authorizedUserIds: string[]
 }
 
+interface DocsData {
+  documents: Doc[]
+}
+
 const fetcher = (url: string) => fetch(url).then(r => r.json())
+
+function optimisticToggle(current: DocsData | undefined, docId: string, userId: string, grant: boolean): DocsData {
+  return {
+    documents: (current?.documents ?? []).map(d =>
+      d.id === docId
+        ? {
+            ...d,
+            authorizedUserIds: grant
+              ? [...d.authorizedUserIds, userId]
+              : d.authorizedUserIds.filter(id => id !== userId),
+          }
+        : d
+    ),
+  }
+}
 
 export default function UsersPage() {
   const { data: usersData, mutate: mutateUsers } = useSWR<{ users: ClerkUser[] }>('/api/admin/users', fetcher)
-  const { data: docsData, mutate: mutateDocs } = useSWR<{ documents: Doc[] }>('/api/admin/documents', fetcher)
+  const { data: docsData, mutate: mutateDocs } = useSWR<DocsData>('/api/admin/documents', fetcher)
 
   const users = usersData?.users ?? []
   const documents = docsData?.documents ?? []
@@ -27,6 +46,7 @@ export default function UsersPage() {
   const [email, setEmail] = useState('')
   const [inviting, setInviting] = useState(false)
   const [inviteStatus, setInviteStatus] = useState<{ type: 'success' | 'error'; msg: string } | null>(null)
+  const [pending, setPending] = useState<Set<string>>(new Set())
 
   const handleInvite = useCallback(async (e: React.FormEvent) => {
     e.preventDefault()
@@ -52,13 +72,37 @@ export default function UsersPage() {
   }, [email, mutateUsers])
 
   const handleToggle = useCallback(async (userId: string, docId: string, currentlyGranted: boolean) => {
-    await fetch('/api/admin/access', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, documentId: docId, grant: !currentlyGranted }),
-    })
-    mutateDocs()
-  }, [mutateDocs])
+    const key = `${userId}:${docId}`
+    if (pending.has(key)) return
+
+    const grant = !currentlyGranted
+
+    setPending(prev => new Set(prev).add(key))
+    try {
+      await mutateDocs(
+        async (current) => {
+          const res = await fetch('/api/admin/access', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId, documentId: docId, grant }),
+          })
+          if (!res.ok) throw new Error('Failed to update access')
+          return optimisticToggle(current, docId, userId, grant)
+        },
+        {
+          optimisticData: (current) => optimisticToggle(current, docId, userId, grant),
+          rollbackOnError: true,
+          revalidate: false,
+        }
+      )
+    } finally {
+      setPending(prev => {
+        const next = new Set(prev)
+        next.delete(key)
+        return next
+      })
+    }
+  }, [pending, mutateDocs])
 
   return (
     <div className="admin-section">
@@ -112,16 +156,21 @@ export default function UsersPage() {
               <div className="access-docs">
                 {documents.map(doc => {
                   const granted = doc.authorizedUserIds.includes(user.id)
+                  const key = `${user.id}:${doc.id}`
+                  const isPending = pending.has(key)
                   return (
                     <div key={doc.id} className="access-doc-item">
-                      <label className="access-toggle">
-                        <input
-                          type="checkbox"
-                          checked={granted}
-                          onChange={() => handleToggle(user.id, doc.id, granted)}
-                        />
-                        <span className="access-toggle-track" />
-                      </label>
+                      <button
+                        type="button"
+                        role="switch"
+                        aria-checked={granted}
+                        aria-label={`${granted ? 'Revoke' : 'Grant'} access to ${doc.name}`}
+                        className={`access-toggle${granted ? ' access-toggle--on' : ''}${isPending ? ' access-toggle--pending' : ''}`}
+                        onClick={() => handleToggle(user.id, doc.id, granted)}
+                        disabled={isPending}
+                      >
+                        <span className="access-toggle-thumb" />
+                      </button>
                       <span className="access-doc-name">{doc.name}</span>
                     </div>
                   )
