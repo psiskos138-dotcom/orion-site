@@ -79,7 +79,7 @@
 .form-row:last-of-type { border-bottom: 1px solid #EBEBEB; }
 
 .form-label {
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 11px;
   color: #C8000A;
   font-style: italic;
@@ -87,7 +87,7 @@
 }
 
 .form-input {
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 15px;
   color: #0A0A0A;
   border: none;
@@ -132,7 +132,7 @@
 }
 
 .contact-sent {
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 18px;
   font-style: italic;
   color: #888;
@@ -149,7 +149,7 @@
 }
 
 .contact-footer-l {
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 11px;
   font-style: italic;
   color: #888;
