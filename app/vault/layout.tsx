@@ -18,7 +18,7 @@ export default async function VaultLayout({ children }: { children: React.ReactN
           <span className="vault-header-label">Document Vault</span>
         </div>
         <div className="vault-header-right">
-          <span className="vault-user">{user?.emailAddresses[0]?.emailAddress}</span>
+          <span className="vault-user">{user?.firstName || user?.emailAddresses[0]?.emailAddress}</span>
           <SignOutButton redirectUrl="/sign-in">
             <button className="vault-signout">Sign out</button>
           </SignOutButton>
