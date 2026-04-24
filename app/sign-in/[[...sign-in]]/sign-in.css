@@ -1,34 +1,78 @@
-.auth-wrap {
+.si-doc {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 24px;
   background: #fff;
 }
 
-.auth-header {
+.si-header {
+  padding: 22px var(--mr) 0 var(--ml);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 32px;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.auth-wordmark {
+.si-wordmark {
   font-family: var(--helvetica);
-  font-size: 28px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.44em;
   color: var(--black);
   text-transform: uppercase;
 }
 
-.auth-sub {
-  font-family: var(--garamond);
-  font-size: 13px;
-  font-style: italic;
+.si-label {
+  font-family: var(--helvetica);
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: var(--dim);
-  letter-spacing: 0.06em;
+}
+
+.si-lockup {
+  padding: 28px var(--mr) 0 var(--ml);
+}
+
+.si-rs-1 {
+  width: 100%;
+  height: 3px;
+  background: var(--black);
+}
+
+.si-rs-2 {
+  width: 71%;
+  height: 1.5px;
+  background: var(--black);
+  opacity: 0.18;
+  margin-top: 9px;
+}
+
+.si-rs-3 {
+  width: 42.5%;
+  height: 2.5px;
+  background: var(--red);
+  margin-top: 9px;
+}
+
+.si-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 24px 80px;
+}
+
+.si-body > * {
+  width: 100%;
+  max-width: 360px;
+}
+
+@media (max-width: 860px) {
+  .si-header {
+    padding: 20px 24px 0;
+  }
+
+  .si-lockup {
+    padding: 24px 24px 0;
+  }
 }
