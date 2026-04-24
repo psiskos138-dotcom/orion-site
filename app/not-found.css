@@ -1,0 +1,145 @@
+.nf-doc {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 64px;
+}
+
+.nf-header {
+  padding: 22px var(--mr) 0 var(--ml);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nf-ref,
+.nf-status {
+  font-family: var(--helvetica);
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+  line-height: 2;
+}
+
+.nf-lockup {
+  padding: 64px var(--mr) 0 var(--ml);
+}
+
+.nf-rs-1 {
+  width: 100%;
+  height: 3px;
+  background: var(--black);
+}
+
+.nf-rs-2 {
+  width: 71%;
+  height: 1.5px;
+  background: var(--black);
+  opacity: 0.18;
+  margin-top: 9px;
+}
+
+.nf-rs-3 {
+  width: 42.5%;
+  height: 2.5px;
+  background: var(--red);
+  margin-top: 9px;
+}
+
+.nf-number {
+  font-family: var(--helvetica);
+  font-size: clamp(80px, 18vw, 220px);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 0.88;
+  color: var(--black);
+  margin-top: 18px;
+}
+
+.nf-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--faint);
+  margin-top: 11px;
+}
+
+.nf-body {
+  padding: 56px var(--mr) 0 var(--ml);
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0 36px;
+}
+
+.nf-message {
+  grid-column: 2;
+  font-family: var(--garamond);
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--dim);
+  margin-bottom: 24px;
+}
+
+.nf-link {
+  grid-column: 2;
+  display: inline-block;
+  font-family: var(--garamond);
+  font-size: 16px;
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px solid var(--black);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.nf-link:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.nf-colophon {
+  margin-top: auto;
+  padding: 28px var(--mr) 0 var(--ml);
+  border-top: 1px solid var(--faint);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.nf-col-l {
+  font-family: var(--garamond);
+  font-size: 11px;
+  font-style: italic;
+  color: var(--dim);
+}
+
+.nf-col-r {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+@media (max-width: 860px) {
+  .nf-header {
+    padding: 20px 24px 0;
+  }
+
+  .nf-lockup {
+    padding: 36px 24px 0;
+  }
+
+  .nf-body {
+    padding: 40px 24px 0;
+    grid-template-columns: 1fr;
+  }
+
+  .nf-message,
+  .nf-link {
+    grid-column: 1;
+  }
+
+  .nf-colophon {
+    padding: 20px 24px 0;
+  }
+}
