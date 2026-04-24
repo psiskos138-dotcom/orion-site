@@ -8,8 +8,7 @@ export default function Contact() {
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('idle');
-
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
     const res = await fetch('/api/contact', {
