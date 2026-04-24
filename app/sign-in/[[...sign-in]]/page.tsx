@@ -2,69 +2,26 @@ import { SignIn } from '@clerk/nextjs'
 import './sign-in.css'
 
 const appearance = {
-  variables: {
-    colorPrimary: '#b00',
-    colorText: '#111',
-    colorTextSecondary: '#888',
-    colorBackground: '#fff',
-    colorInputBackground: '#fff',
-    colorInputText: '#111',
-    borderRadius: '0px',
-    fontSize: '15px',
-  },
   elements: {
-    card: {
-      boxShadow: 'none',
-      border: 'none',
-      padding: '0',
-      gap: '20px',
-    },
-    header: { display: 'none' },
-    formFieldLabel: {
-      fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-      fontSize: '9px',
-      letterSpacing: '0.18em',
-      textTransform: 'uppercase' as const,
-      color: '#888',
-    },
-    formFieldInput: {
-      border: '1px solid #111',
-      borderRadius: '0',
-      fontFamily: '"Cormorant Garamond", Georgia, serif',
-      fontSize: '16px',
-      color: '#111',
-      backgroundColor: '#fff',
-    },
-    formButtonPrimary: {
-      backgroundColor: '#111',
-      fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-      fontSize: '9.5px',
-      fontWeight: '400',
-      letterSpacing: '0.2em',
-      textTransform: 'uppercase' as const,
-      borderRadius: '0',
-      boxShadow: 'none',
-    },
-    footer: { display: 'none' },
-    footerAction: { display: 'none' },
-    footerActionText: { display: 'none' },
-    identityPreviewText: {
-      fontFamily: '"Cormorant Garamond", Georgia, serif',
-      fontSize: '15px',
-    },
-    socialButtonsRoot: { display: 'none' },
-    dividerRow: { display: 'none' },
-    formFieldErrorText: {
-      fontFamily: '"Cormorant Garamond", Georgia, serif',
-      fontStyle: 'italic',
-      fontSize: '13px',
-      color: '#b00',
-    },
-    alertText: {
-      fontFamily: '"Cormorant Garamond", Georgia, serif',
-      fontStyle: 'italic',
-      fontSize: '14px',
-    },
+    rootBox: 'si-clerk-root',
+    cardBox: 'si-clerk-box',
+    card: 'si-clerk-card',
+    formFields: 'si-clerk-fields',
+    formField: 'si-clerk-field',
+    formFieldLabel: 'si-clerk-label',
+    formFieldInput: 'si-clerk-input',
+    formFieldInputShowPasswordButton: 'si-clerk-hide',
+    formButtonPrimary: 'si-clerk-btn',
+    formResendCodeLink: 'si-clerk-resend',
+    formFieldErrorText: 'si-clerk-error',
+    alertText: 'si-clerk-error',
+    identityPreviewText: 'si-clerk-identity-text',
+    identityPreviewEditButton: 'si-clerk-identity-edit',
+    header: 'si-clerk-hide',
+    footer: 'si-clerk-hide',
+    footerAction: 'si-clerk-hide',
+    socialButtonsRoot: 'si-clerk-hide',
+    dividerRow: 'si-clerk-hide',
   },
 }
 
@@ -83,7 +40,9 @@ export default function SignInPage() {
       </div>
 
       <main className="si-body">
-        <SignIn appearance={appearance} />
+        <div className="si-form-wrap">
+          <SignIn appearance={appearance} />
+        </div>
       </main>
     </div>
   )

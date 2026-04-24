@@ -55,16 +55,136 @@
 }
 
 .si-body {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 56px 24px 80px;
+  padding: 56px var(--mr) 80px var(--ml);
 }
 
-.si-body > * {
-  width: 100%;
-  max-width: 360px;
+.si-form-wrap {
+  max-width: 480px;
+}
+
+/* ── Clerk overrides ─────────────────────────────────────────── */
+
+.si-clerk-root {
+  display: block !important;
+  width: 100% !important;
+}
+
+.si-clerk-box {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+  width: 100% !important;
+}
+
+.si-clerk-card {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  width: 100% !important;
+}
+
+.si-clerk-fields {
+  gap: 0 !important;
+  border-bottom: 1px solid var(--faint) !important;
+}
+
+.si-clerk-field {
+  border-top: 1px solid var(--faint) !important;
+  padding: 20px 0 !important;
+  gap: 6px !important;
+}
+
+.si-clerk-label {
+  font-family: var(--garamond) !important;
+  font-size: 11px !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  color: var(--red) !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  margin: 0 !important;
+}
+
+.si-clerk-input {
+  font-family: var(--garamond) !important;
+  font-size: 16px !important;
+  color: var(--black) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  height: auto !important;
+  line-height: 1.6 !important;
+}
+
+.si-clerk-input:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.si-clerk-btn {
+  font-family: var(--helvetica) !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: #fff !important;
+  background: var(--black) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 14px 32px !important;
+  box-shadow: none !important;
+  margin-top: 32px !important;
+  width: auto !important;
+  align-self: flex-start !important;
+  cursor: pointer !important;
+  transition: background 0.15s !important;
+}
+
+.si-clerk-btn:hover {
+  background: var(--red) !important;
+}
+
+.si-clerk-error {
+  font-family: var(--garamond) !important;
+  font-size: 13px !important;
+  font-style: italic !important;
+  color: var(--red) !important;
+  margin-top: 4px !important;
+}
+
+.si-clerk-resend {
+  font-family: var(--garamond) !important;
+  font-size: 14px !important;
+  font-style: italic !important;
+  color: var(--dim) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--dim) !important;
+  padding-bottom: 1px !important;
+}
+
+.si-clerk-identity-text {
+  font-family: var(--garamond) !important;
+  font-size: 15px !important;
+  color: var(--black) !important;
+}
+
+.si-clerk-identity-edit {
+  font-family: var(--helvetica) !important;
+  font-size: 9px !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: var(--dim) !important;
+}
+
+.si-clerk-hide {
+  display: none !important;
 }
 
 @media (max-width: 860px) {
@@ -74,5 +194,9 @@
 
   .si-lockup {
     padding: 24px 24px 0;
+  }
+
+  .si-body {
+    padding: 48px 24px 64px;
   }
 }
