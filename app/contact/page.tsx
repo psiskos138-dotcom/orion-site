@@ -4,27 +4,20 @@ import { useState } from 'react';
 import './contact.css';
 
 export default function Contact() {
-const [name, setName] = useState('');
-const [email, setEmail] = useState('');
-const [phone, setPhone] = useState('');
-const [company, setCompany] = useState('');
-const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [company, setCompany] = useState('');
+  const [message, setMessage] = useState('');
   const [status, setStatus] = useState('idle');
-const handleSubmit = async (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, company, message }),
-      <div className="form-row">
-  <label className="form-label" htmlFor="email">Email</label>
-  <input id="email" type="email" required className="form-input" value={email} onChange={e => setEmail(e.target.value)} />
-</div>
-<div className="form-row">
-  <label className="form-label" htmlFor="phone">Phone</label>
-  <input id="phone" type="tel" className="form-input" value={phone} onChange={e => setPhone(e.target.value)} />
-</div>
+      body: JSON.stringify({ name, email, phone, company, message }),
     });
     if (res.ok) setStatus('sent');
     else setStatus('error');
@@ -53,6 +46,14 @@ const handleSubmit = async (e: React.FormEvent) => {
             <div className="form-row">
               <label className="form-label" htmlFor="name">Name</label>
               <input id="name" type="text" required className="form-input" value={name} onChange={e => setName(e.target.value)} />
+            </div>
+            <div className="form-row">
+              <label className="form-label" htmlFor="email">Email</label>
+              <input id="email" type="email" required className="form-input" value={email} onChange={e => setEmail(e.target.value)} />
+            </div>
+            <div className="form-row">
+              <label className="form-label" htmlFor="phone">Phone</label>
+              <input id="phone" type="tel" className="form-input" value={phone} onChange={e => setPhone(e.target.value)} />
             </div>
             <div className="form-row">
               <label className="form-label" htmlFor="company">Company</label>
