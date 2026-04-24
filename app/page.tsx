@@ -84,16 +84,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="execution" id="execution">
-          <div className="exec-label">Enquiries</div>
-          <div>
-            <a className="exec-email" href="mailto:info@otlnyc.com">
-              info@otlnyc.com
-            </a>
-          </div>
-        </div>
-
-        <footer className="colophon" id="colophon">
+       <div className="execution" id="execution">
+  <div className="exec-label">Enquiries</div>
+  <div>
+    <a className="exec-email" href="/contact">
+      Get in touch
+    </a>
+  </div>
+</div><footer className="colophon" id="colophon">
           <span className="col-l">Orion Trade &amp; Logistics LLC</span>
           <span className="col-r">New York</span>
         </footer>
