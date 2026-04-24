@@ -1,9 +1,14 @@
+import type { Metadata } from 'next'
 import { auth } from '@clerk/nextjs/server'
 import { SignOutButton } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
 import { isAdmin } from '@/lib/auth'
 import { AdminNav } from './AdminNav'
 import './admin.css'
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+}
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const { userId } = await auth()
