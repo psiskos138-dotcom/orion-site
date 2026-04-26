@@ -15,8 +15,7 @@ export default function StructuringPage() {
           New York &nbsp;·&nbsp; Principal. Not broker.
         </a>
         <div className="ops-section-ref">
-          Operations<br />
-          § 3 &nbsp;·&nbsp; Structuring
+          Structuring &amp; Execution
         </div>
       </header>
 
@@ -26,8 +25,8 @@ export default function StructuringPage() {
         <div className="ops-rs-3" aria-hidden="true" />
         <span className="ops-wordmark">ORION</span>
         <div className="ops-sub-row">
-          <span className="ops-sub-tl">Operations</span>
-          <span className="ops-sub-section">§ 3</span>
+          <span className="ops-sub-tl">Trade &amp; Logistics</span>
+          <span className="ops-sub-llc">LLC &nbsp;·&nbsp; New York</span>
         </div>
         <div className="ops-lockup-rule" aria-hidden="true" />
       </div>

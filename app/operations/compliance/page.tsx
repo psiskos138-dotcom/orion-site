@@ -15,8 +15,7 @@ export default function CompliancePage() {
           New York &nbsp;·&nbsp; Principal. Not broker.
         </a>
         <div className="ops-section-ref">
-          Operations<br />
-          § 2 &nbsp;·&nbsp; Compliance
+          Due Diligence &amp; Compliance
         </div>
       </header>
 
@@ -26,8 +25,8 @@ export default function CompliancePage() {
         <div className="ops-rs-3" aria-hidden="true" />
         <span className="ops-wordmark">ORION</span>
         <div className="ops-sub-row">
-          <span className="ops-sub-tl">Operations</span>
-          <span className="ops-sub-section">§ 2</span>
+          <span className="ops-sub-tl">Trade &amp; Logistics</span>
+          <span className="ops-sub-llc">LLC &nbsp;·&nbsp; New York</span>
         </div>
         <div className="ops-lockup-rule" aria-hidden="true" />
       </div>
