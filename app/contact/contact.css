@@ -30,7 +30,7 @@
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #888;
+  color: #767676;
 }
 
 .contact-wrap {
@@ -135,7 +135,7 @@
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 18px;
   font-style: italic;
-  color: #888;
+  color: #767676;
   line-height: 1.8;
   padding: 40px 0;
 }
@@ -152,14 +152,14 @@
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 11px;
   font-style: italic;
-  color: #888;
+  color: #767676;
 }
 
 .contact-footer-r {
   font-size: 9px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #888;
+  color: #767676;
 }
 
 @media (max-width: 860px) {
@@ -167,8 +167,11 @@
   .contact-wrap { padding: 0 24px; }
   .contact-footer { padding: 20px 24px 0; }
   .form-row { grid-template-columns: 80px 1fr; gap: 0 16px; }
-}.form-input:focus {
+}
+
+.form-input:focus {
   outline: none;
+  border-bottom: 1.5px solid #0A0A0A;
 }
 
 input, textarea {

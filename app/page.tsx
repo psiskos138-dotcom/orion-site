@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import './page.css';
 
 export default function Home() {
   useEffect(() => {
@@ -28,8 +29,8 @@ export default function Home() {
 
   return (
     <>
-      <div id="curtain" className="curtain" />
-      <div className="doc">
+      <div id="curtain" className="curtain" aria-hidden="true" />
+      <main className="doc">
 
         <header id="doc-header" className="doc-header">
           <div className="doc-ref">
@@ -43,15 +44,15 @@ export default function Home() {
         </header>
 
         <div className="lockup-wrap">
-          <div className="rs-1" />
-          <div className="rs-2" id="rs2" />
-          <div className="rs-3" id="rs3" />
+          <div className="rs-1" aria-hidden="true" />
+          <div className="rs-2" id="rs2" aria-hidden="true" />
+          <div className="rs-3" id="rs3" aria-hidden="true" />
           <span className="wordmark" id="wordmark">ORION</span>
           <div className="sub-row" id="sub-row">
             <span className="sub-tl">Trade &amp; Logistics</span>
             <span className="sub-llc" id="sub-llc">LLC &nbsp;·&nbsp; New York</span>
           </div>
-          <div className="lockup-rule" id="lockup-rule" />
+          <div className="lockup-rule" id="lockup-rule" aria-hidden="true" />
         </div>
 
         <div className="provisions" id="provisions">
@@ -96,7 +97,7 @@ export default function Home() {
           <span className="col-r">New York</span>
         </footer>
 
-      </div>
+      </main>
     </>
   );
 }

@@ -26,16 +26,16 @@ export default function Contact() {
   return (
     <div className="contact-page">
       <header className="contact-header">
-        <a href="/" className="contact-back">Orion</a>
+        <a href="/" className="contact-back" aria-label="Return to Orion home">Orion</a>
         <span className="contact-title">Enquiries</span>
       </header>
-      <div className="contact-wrap">
+      <main className="contact-wrap">
         <div className="contact-lockup">
-          <div className="c-r1" />
-          <div className="c-r2" />
-          <div className="c-r3" />
+          <div className="c-r1" aria-hidden="true" />
+          <div className="c-r2" aria-hidden="true" />
+          <div className="c-r3" aria-hidden="true" />
           <h1 className="contact-heading">Get in<br />touch.</h1>
-          <div className="c-rule" />
+          <div className="c-rule" aria-hidden="true" />
         </div>
         {status === 'sent' ? (
           <div className="contact-sent">
@@ -70,7 +70,7 @@ export default function Contact() {
             </div>
           </form>
         )}
-      </div>
+      </main>
       <footer className="contact-footer">
         <span className="contact-footer-l">Orion Trade &amp; Logistics LLC</span>
         <span className="contact-footer-r">New York</span>

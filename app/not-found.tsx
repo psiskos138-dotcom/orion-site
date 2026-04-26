@@ -9,7 +9,7 @@ export default function NotFound() {
         <span className="nf-status">Error&nbsp;·&nbsp;404</span>
       </header>
 
-      <div className="nf-lockup">
+      <div className="nf-lockup" aria-hidden="true">
         <div className="nf-rs-1" />
         <div className="nf-rs-2" />
         <div className="nf-rs-3" />
@@ -17,12 +17,12 @@ export default function NotFound() {
         <div className="nf-rule" />
       </div>
 
-      <div className="nf-body">
+      <main className="nf-body">
         <p className="nf-message">
           The page you requested could not be located.
         </p>
         <Link href="/" className="nf-link">Return to homepage</Link>
-      </div>
+      </main>
 
       <footer className="nf-colophon">
         <span className="nf-col-l">otlnyc.com</span>
