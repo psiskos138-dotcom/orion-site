@@ -40,7 +40,7 @@ export default function Home() {
           </div>
           <div className="doc-status">
             US-governed<br />
-            <span className="live">OFAC aligned</span>
+            <span className="live">OFAC compliant</span>
           </div>
         </header>
 
@@ -70,8 +70,7 @@ export default function Home() {
               We are not a broker. We do not split exposure.{' '}
               <em>Patience. Discretion. Execution.</em> These are not
               aspirations — they are the minimum standard by which{' '}
-              <span className="dt">The Firm</span> operates in every
-              market it enters.
+              Orion operates in every market it enters.
             </div>
           </Link>
           <Link href="/operations/structuring" className="provision">
@@ -80,7 +79,7 @@ export default function Home() {
               Our model is built on direct relationships — on-the-ground
               at origin, controlled in-house through documentation and
               structuring, clean at settlement.{' '}
-              <span className="dt">US-governed. OFAC aligned.</span>{' '}
+              <span className="dt">US-governed. OFAC compliant.</span>{' '}
               New York LLC.
             </div>
           </Link>
@@ -95,6 +94,7 @@ export default function Home() {
   </div>
 </div><footer className="colophon" id="colophon">
           <span className="col-l">Orion Trade &amp; Logistics LLC</span>
+          <span className="col-m">NY DOS &nbsp;·&nbsp; 7850574</span>
           <span className="col-r">New York</span>
         </footer>
 

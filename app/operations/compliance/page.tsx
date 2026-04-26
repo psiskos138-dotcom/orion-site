@@ -38,7 +38,7 @@ export default function CompliancePage() {
           <div>
             <h1 className="ops-heading">Due Diligence &amp; Compliance</h1>
             <p className="ops-text">
-              Our compliance framework adopts internationally recognised legal and
+              Our compliance framework adopts internationally recognized legal and
               regulatory standards and applies them across every transaction we
               undertake. We operate under US law and align with OFAC sanctions
               requirements on every deal regardless of origin or destination.
