@@ -38,11 +38,25 @@ export default function CompliancePage() {
           <div>
             <h1 className="ops-heading">Due Diligence &amp; Compliance</h1>
             <p className="ops-text">
-              Every counterparty we engage is fully verified before a transaction
-              moves forward. KYC is completed. Licenses are checked. Documentation
-              is confirmed valid. We govern ourselves to US standards on every deal
-              regardless of where it originates — OFAC aligned, fully documented,
-              no exceptions.
+              Our compliance framework adopts internationally recognised legal and
+              regulatory standards and applies them across every transaction we
+              undertake. We operate under US law and align with OFAC sanctions
+              requirements on every deal regardless of origin or destination.
+            </p>
+            <p className="ops-text">
+              Key areas of focus include anti-money laundering, prevention of
+              bribery and corruption, trade and economic sanctions, and the
+              verification of applicable licenses and documentation for all
+              counterparties we engage.
+            </p>
+            <p className="ops-text">
+              Every supplier and counterparty is subject to KYC review before a
+              transaction proceeds. We apply a defined approach to due diligence
+              across our supply chain — with particular attention to provenance,
+              documentation integrity, and the identification of risk at origin.
+            </p>
+            <p className="ops-text">
+              We do not proceed until we are satisfied.
             </p>
           </div>
         </div>

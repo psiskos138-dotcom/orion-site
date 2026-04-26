@@ -134,6 +134,7 @@
   line-height: 1.82;
   color: var(--black);
 }
+.ops-text + .ops-text { margin-top: 1.4em; }
 
 /* COLOPHON */
 .ops-colophon {

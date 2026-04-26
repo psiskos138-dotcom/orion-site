@@ -38,10 +38,13 @@ export default function StructuringPage() {
           <div>
             <h1 className="ops-heading">Structuring &amp; Execution</h1>
             <p className="ops-text">
-              Every transaction we take on is different. We don&rsquo;t apply
-              templates — we build each deal from scratch around the specific
-              commodity, the parties involved, and the conditions on the ground.
-              That specificity is what makes execution reliable.
+              Every deal we take on is unique. We build each one from scratch —
+              structured around the parties involved and the conditions on the
+              ground. The approach is always custom. The standards never are.
+              We apply the same ethics, diligence, and discipline across
+              everything we do, and we support positive outcomes for the
+              communities we work in by ensuring every transaction is clean,
+              documented, and properly settled.
             </p>
           </div>
         </div>

@@ -38,10 +38,11 @@ export default function SourcingPage() {
           <div>
             <h1 className="ops-heading">Sourcing &amp; Delivery</h1>
             <p className="ops-text">
-              We go to the source. Our representatives operate on the ground in the
-              markets we trade — building relationships directly with producers,
-              understanding the supply before we commit to it. Every transaction
-              begins with presence, not a phone call.
+              We manage complex supply chains — moving physical commodities from
+              where they are produced to where they are needed. Our representatives
+              are on the ground at origin, building direct relationships with
+              producers and understanding the supply before we commit to it.
+              Every transaction begins with presence.
             </p>
           </div>
         </div>
