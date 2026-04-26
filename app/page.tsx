@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Link from 'next/link';
 import './page.css';
 
 export default function Home() {
@@ -56,14 +57,14 @@ export default function Home() {
         </div>
 
         <div className="provisions" id="provisions">
-          <div className="provision">
+          <Link href="/operations/sourcing" className="provision">
             <div className="prov-num">§ 1.</div>
             <div className="prov-body">
               We source, structure, and deliver physical commodities
               from origin to destination — as principal, on every deal.
             </div>
-          </div>
-          <div className="provision">
+          </Link>
+          <Link href="/operations/compliance" className="provision">
             <div className="prov-num">§ 2.</div>
             <div className="prov-body">
               We are not a broker. We do not split exposure.{' '}
@@ -72,8 +73,8 @@ export default function Home() {
               <span className="dt">The Firm</span> operates in every
               market it enters.
             </div>
-          </div>
-          <div className="provision">
+          </Link>
+          <Link href="/operations/structuring" className="provision">
             <div className="prov-num">§ 3.</div>
             <div className="prov-body">
               Our model is built on direct relationships — on-the-ground
@@ -82,7 +83,7 @@ export default function Home() {
               <span className="dt">US-governed. OFAC aligned.</span>{' '}
               New York LLC.
             </div>
-          </div>
+          </Link>
         </div>
 
        <div className="execution" id="execution">

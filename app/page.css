@@ -131,6 +131,8 @@
   gap: 0 36px;
   border-top: 1px solid var(--faint);
   padding: 32px 0;
+  text-decoration: none;
+  color: inherit;
 }
 .provision:last-child { border-bottom: 1px solid var(--faint); }
 
@@ -147,8 +149,11 @@
   font-size: 17px;
   line-height: 1.82;
   color: var(--black);
+  transition: color 0.15s;
 }
 .prov-body em { font-style: italic; }
+
+.provision:hover .prov-body { color: var(--red); }
 
 .dt {
   font-family: var(--helvetica);
