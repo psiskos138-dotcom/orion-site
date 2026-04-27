@@ -38,10 +38,10 @@ export default function SourcingPage() {
             <h1 className="ops-heading">Sourcing &amp; Delivery</h1>
             <p className="ops-text">
               We manage complex supply chains — moving physical commodities from
-              where they are produced to where they are needed. Our representatives
-              are on the ground at origin, building direct relationships with
-              producers and understanding the supply before we commit to it.
-              Every transaction begins with presence.
+              where they are produced to where they are needed. On the ground at
+              origin, we build direct relationships with producers and understand
+              the supply before we commit to it. Every transaction begins with
+              presence.
             </p>
           </div>
         </div>
