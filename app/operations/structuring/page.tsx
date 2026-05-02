@@ -10,26 +10,8 @@ export default function StructuringPage() {
   return (
     <div className="ops-doc">
       <header className="ops-header">
-        <a href="/" className="ops-back">
-          Physical commodity trading<br />
-          New York &nbsp;·&nbsp; Principal. Not broker.
-        </a>
-        <div className="ops-section-ref">
-          Structuring &amp; Execution
-        </div>
+        <a href="/" className="ops-back">← Overview</a>
       </header>
-
-      <div className="ops-lockup">
-        <div className="ops-rs-1" aria-hidden="true" />
-        <div className="ops-rs-2" aria-hidden="true" />
-        <div className="ops-rs-3" aria-hidden="true" />
-        <span className="ops-wordmark">ORION</span>
-        <div className="ops-sub-row">
-          <span className="ops-sub-tl">Trade &amp; Logistics</span>
-          <span className="ops-sub-llc">LLC &nbsp;·&nbsp; New York</span>
-        </div>
-        <div className="ops-lockup-rule" aria-hidden="true" />
-      </div>
 
       <main className="ops-body">
         <div className="ops-provision">
@@ -37,17 +19,31 @@ export default function StructuringPage() {
           <div>
             <h1 className="ops-heading">Structuring &amp; Execution</h1>
             <p className="ops-text">
-              Every deal we take on is unique. We build each one from scratch —
-              structured around the parties involved and the conditions on the
-              ground. The approach is always custom. The standards never are.
-              We apply the same ethics, diligence, and discipline across
-              everything we do, and we support positive outcomes for the
-              communities we work in by ensuring every transaction is clean,
-              documented, and properly settled.
+              We take position. We do not intermediate.
+            </p>
+            <p className="ops-text">
+              Each transaction is structured around the parties involved and
+              the conditions on the ground. There is no standard template.
+              What remains constant is the standard applied — consistent
+              diligence, documentation, and settlement discipline across
+              every deal.
+            </p>
+            <p className="ops-text">
+              We engage with licensed producers, aggregators, refineries, and
+              institutional end buyers. We do not participate in open-market
+              brokerage or multi-party chains.
+            </p>
+            <p className="ops-text">
+              We proceed selectively.
             </p>
           </div>
         </div>
       </main>
+
+      <nav className="ops-bottom-nav">
+        <a href="/operations/compliance" className="ops-back">← §2 Due Diligence &amp; Compliance</a>
+        <a href="/contact" className="ops-back">Inquire →</a>
+      </nav>
 
       <footer className="ops-colophon">
         <span className="ops-col-l">Orion Trade &amp; Logistics LLC</span>

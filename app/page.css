@@ -168,36 +168,24 @@
 .execution {
   padding: 0 var(--mr) 0 var(--ml);
   margin-top: 72px;
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 0 36px;
+  font-family: var(--garamond);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--dim);
   opacity: 0;
   transition: opacity 0.7s ease 0.1s;
 }
 .execution.show { opacity: 1; }
 
-.exec-label {
+.exec-link {
   font-family: var(--garamond);
-  font-size: 15px;
-  color: #3A3A3A;
+  font-size: 13px;
   font-style: italic;
-  padding-top: 2px;
-}
-
-.exec-email {
-  display: inline-block;
-  font-family: var(--garamond);
-  font-size: 19px;
   color: var(--black);
   text-decoration: none;
-  border-bottom: 1px solid var(--black);
-  padding-bottom: 1px;
-  transition: color 0.15s, border-color 0.15s;
+  transition: color 0.15s;
 }
-.exec-email:hover {
-  color: var(--red);
-  border-color: var(--red);
-}
+.exec-link:hover { color: var(--red); }
 
 /* COLOPHON */
 .colophon {
@@ -270,8 +258,6 @@
   .execution {
     padding: 0 24px;
     margin-top: 48px;
-    grid-template-columns: 40px 1fr;
-    gap: 0 16px;
   }
 
   .colophon {

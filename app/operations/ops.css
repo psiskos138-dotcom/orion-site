@@ -145,6 +145,15 @@
 }
 .ops-text + .ops-text { margin-top: 1.4em; }
 
+/* BOTTOM NAV */
+.ops-bottom-nav {
+  margin-top: 64px;
+  padding: 0 var(--mr) 0 var(--ml);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
 /* COLOPHON */
 .ops-colophon {
   padding: 28px var(--mr) 0 var(--ml);
@@ -203,6 +212,11 @@
     grid-template-columns: 40px 1fr;
     gap: 0 16px;
     padding: 20px 0;
+  }
+
+  .ops-bottom-nav {
+    padding: 0 24px;
+    margin-top: 48px;
   }
 
   .ops-colophon {

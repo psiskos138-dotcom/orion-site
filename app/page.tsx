@@ -35,7 +35,7 @@ export default function Home() {
 
         <header id="doc-header" className="doc-header">
           <div className="doc-ref">
-            Physical commodity trading<br />
+            Physical Commodity Trading · Metals · Select Commodities<br />
             New York &nbsp;·&nbsp; Principal. Not broker.
           </div>
           <div className="doc-status">
@@ -60,8 +60,9 @@ export default function Home() {
           <Link href="/operations/sourcing" className="provision">
             <div className="prov-num">§ 1.</div>
             <div className="prov-body">
-              We source, structure, and deliver physical commodities
-              from origin to destination — as principal, on every deal.
+              We source, structure, and deliver physical metals — precious
+              metals and select secondary materials — from origin to
+              destination, as principal, on every deal.
             </div>
           </Link>
           <Link href="/operations/compliance" className="provision">
@@ -85,14 +86,10 @@ export default function Home() {
           </Link>
         </div>
 
-       <div className="execution" id="execution">
-  <div className="exec-label">Enquiries</div>
-  <div>
-    <a className="exec-email" href="/contact">
-      Get in touch
-    </a>
-  </div>
-</div><footer className="colophon" id="colophon">
+        <div className="execution" id="execution">
+          Qualified inquiries only.{' '}
+          <a className="exec-link" href="/contact">Inquire →</a>
+        </div><footer className="colophon" id="colophon">
           <span className="col-l">Orion Trade &amp; Logistics LLC</span>
           <span className="col-m">NY DOS &nbsp;·&nbsp; 7850574</span>
           <span className="col-r">New York</span>

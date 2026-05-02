@@ -10,26 +10,8 @@ export default function CompliancePage() {
   return (
     <div className="ops-doc">
       <header className="ops-header">
-        <a href="/" className="ops-back">
-          Physical commodity trading<br />
-          New York &nbsp;·&nbsp; Principal. Not broker.
-        </a>
-        <div className="ops-section-ref">
-          Due Diligence &amp; Compliance
-        </div>
+        <a href="/" className="ops-back">← Overview</a>
       </header>
-
-      <div className="ops-lockup">
-        <div className="ops-rs-1" aria-hidden="true" />
-        <div className="ops-rs-2" aria-hidden="true" />
-        <div className="ops-rs-3" aria-hidden="true" />
-        <span className="ops-wordmark">ORION</span>
-        <div className="ops-sub-row">
-          <span className="ops-sub-tl">Trade &amp; Logistics</span>
-          <span className="ops-sub-llc">LLC &nbsp;·&nbsp; New York</span>
-        </div>
-        <div className="ops-lockup-rule" aria-hidden="true" />
-      </div>
 
       <main className="ops-body">
         <div className="ops-provision">
@@ -37,22 +19,18 @@ export default function CompliancePage() {
           <div>
             <h1 className="ops-heading">Due Diligence &amp; Compliance</h1>
             <p className="ops-text">
-              Our compliance framework adopts internationally recognized legal and
-              regulatory standards and applies them across every transaction we
-              undertake. We operate under US law and align with OFAC sanctions
-              requirements on every deal regardless of origin or destination.
+              We operate under US law. OFAC sanctions requirements apply to
+              every transaction, regardless of origin or destination.
             </p>
             <p className="ops-text">
-              Key areas of focus include anti-money laundering, prevention of
-              bribery and corruption, trade and economic sanctions, and the
-              verification of applicable licenses and documentation for all
-              counterparties we engage.
+              All counterparties — suppliers, aggregators, refineries, and
+              buyers — are subject to KYC review prior to engagement.
+              Licenses, documentation, and transaction history are verified
+              before any deal proceeds.
             </p>
             <p className="ops-text">
-              Every supplier and counterparty is subject to KYC review before a
-              transaction proceeds. We apply a defined approach to due diligence
-              across our supply chain — with particular attention to provenance,
-              documentation integrity, and the identification of risk at origin.
+              Areas of focus include anti-money laundering, sanctions
+              compliance, and provenance verification at origin.
             </p>
             <p className="ops-text">
               We do not proceed until we are satisfied.
@@ -60,6 +38,11 @@ export default function CompliancePage() {
           </div>
         </div>
       </main>
+
+      <nav className="ops-bottom-nav">
+        <a href="/operations/sourcing" className="ops-back">← §1 Sourcing &amp; Delivery</a>
+        <a href="/operations/structuring" className="ops-back">§3 Structuring &amp; Execution →</a>
+      </nav>
 
       <footer className="ops-colophon">
         <span className="ops-col-l">Orion Trade &amp; Logistics LLC</span>

@@ -4,11 +4,16 @@ import { useState } from 'react';
 import './contact.css';
 
 export default function Contact() {
-  const [name, setName] = useState('');
+  const [companyName, setCompanyName] = useState('');
+  const [contactName, setContactName] = useState('');
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [company, setCompany] = useState('');
-  const [message, setMessage] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [role, setRole] = useState('');
+  const [commodity, setCommodity] = useState('');
+  const [originLocation, setOriginLocation] = useState('');
+  const [volume, setVolume] = useState('');
+  const [overview, setOverview] = useState('');
+  const [documentationAvailable, setDocumentationAvailable] = useState('');
   const [status, setStatus] = useState('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -17,7 +22,18 @@ export default function Contact() {
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, phone, company, message }),
+      body: JSON.stringify({
+        companyName,
+        contactName,
+        email,
+        whatsapp,
+        role,
+        commodity,
+        originLocation,
+        volume,
+        overview,
+        documentationAvailable,
+      }),
     });
     if (res.ok) setStatus('sent');
     else setStatus('error');
@@ -34,40 +50,90 @@ export default function Contact() {
           <div className="c-r1" aria-hidden="true" />
           <div className="c-r2" aria-hidden="true" />
           <div className="c-r3" aria-hidden="true" />
-          <h1 className="contact-heading">Get in<br />touch.</h1>
+          <h1 className="contact-heading">Qualified Inquiries Only</h1>
+          <p className="contact-subheading">Direct counterparties only.</p>
           <div className="c-rule" aria-hidden="true" />
         </div>
         {status === 'sent' ? (
           <div className="contact-sent">
-            <p>Your enquiry has been received.<br />We will be in touch.</p>
+            <p>Submission received. If aligned, we will respond.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} style={{maxWidth: '560px'}}>
+          <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-row">
-              <label className="form-label" htmlFor="name">Name</label>
-              <input id="name" type="text" required className="form-input" value={name} onChange={e => setName(e.target.value)} />
+              <label className="form-label" htmlFor="companyName">Company Name</label>
+              <input id="companyName" type="text" required className="form-input" value={companyName} onChange={e => setCompanyName(e.target.value)} />
+            </div>
+            <div className="form-row">
+              <label className="form-label" htmlFor="contactName">Contact Name</label>
+              <input id="contactName" type="text" required className="form-input" value={contactName} onChange={e => setContactName(e.target.value)} />
             </div>
             <div className="form-row">
               <label className="form-label" htmlFor="email">Email</label>
               <input id="email" type="email" required className="form-input" value={email} onChange={e => setEmail(e.target.value)} />
             </div>
             <div className="form-row">
-              <label className="form-label" htmlFor="phone">Phone</label>
-              <input id="phone" type="tel" className="form-input" value={phone} onChange={e => setPhone(e.target.value)} />
+              <label className="form-label" htmlFor="whatsapp">WhatsApp (optional)</label>
+              <input id="whatsapp" type="text" className="form-input" value={whatsapp} onChange={e => setWhatsapp(e.target.value)} />
             </div>
             <div className="form-row">
-              <label className="form-label" htmlFor="company">Company</label>
-              <input id="company" type="text" className="form-input" value={company} onChange={e => setCompany(e.target.value)} />
+              <span className="form-label">You are</span>
+              <div className="form-radio-group" role="radiogroup" aria-label="You are">
+                {['Supplier', 'Buyer or Refinery', 'Other'].map(opt => (
+                  <label key={opt} className="form-radio-option">
+                    <input
+                      type="radio"
+                      name="role"
+                      value={opt}
+                      required
+                      checked={role === opt}
+                      onChange={e => setRole(e.target.value)}
+                    />
+                    {opt}
+                  </label>
+                ))}
+              </div>
             </div>
             <div className="form-row">
-              <label className="form-label" htmlFor="message">Message</label>
-              <textarea id="message" required className="form-input form-textarea" value={message} onChange={e => setMessage(e.target.value)} />
+              <label className="form-label" htmlFor="commodity">Commodity</label>
+              <input id="commodity" type="text" required className="form-input" value={commodity} onChange={e => setCommodity(e.target.value)} />
             </div>
-            <div style={{marginTop: '32px'}}>
+            <div className="form-row">
+              <label className="form-label" htmlFor="originLocation">Origin / Location</label>
+              <input id="originLocation" type="text" required className="form-input" value={originLocation} onChange={e => setOriginLocation(e.target.value)} />
+            </div>
+            <div className="form-row">
+              <label className="form-label" htmlFor="volume">Volume</label>
+              <input id="volume" type="text" required className="form-input" value={volume} onChange={e => setVolume(e.target.value)} />
+            </div>
+            <div className="form-row">
+              <label className="form-label" htmlFor="overview">Brief Overview</label>
+              <textarea id="overview" required className="form-input form-textarea" value={overview} onChange={e => setOverview(e.target.value)} />
+            </div>
+            <div className="form-row">
+              <span className="form-label">Documentation Available</span>
+              <div className="form-radio-group" role="radiogroup" aria-label="Documentation Available">
+                {['Yes', 'No'].map(opt => (
+                  <label key={opt} className="form-radio-option">
+                    <input
+                      type="radio"
+                      name="documentationAvailable"
+                      value={opt}
+                      required
+                      checked={documentationAvailable === opt}
+                      onChange={e => setDocumentationAvailable(e.target.value)}
+                    />
+                    {opt}
+                  </label>
+                ))}
+              </div>
+            </div>
+            <div className="form-submit-row">
               <button type="submit" className="form-submit" disabled={status === 'sending'}>
-                {status === 'sending' ? 'Sending...' : 'Send enquiry'}
+                {status === 'sending' ? 'Sending...' : 'Submit'}
               </button>
             </div>
+            <p className="form-confidential">This inquiry is confidential.</p>
           </form>
         )}
       </main>

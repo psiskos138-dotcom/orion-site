@@ -4,19 +4,36 @@ import { NextResponse } from 'next/server';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
-  const { name, email, phone, company, message } = await request.json();
+  const {
+    companyName,
+    contactName,
+    email,
+    whatsapp,
+    role,
+    commodity,
+    originLocation,
+    volume,
+    overview,
+    documentationAvailable,
+  } = await request.json();
 
   try {
     await resend.emails.send({
       from: 'Orion Contact <info@otlnyc.com>',
-      to: 'psiskos138@gmail.com',
-      subject: `New enquiry from ${name}`,
+      to: 'info@otlnyc.com',
+      subject: `New Inquiry — ${companyName}`,
       html: `
-        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Company Name:</strong> ${companyName}</p>
+        <p><strong>Contact Name:</strong> ${contactName}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Company:</strong> ${company}</p>
-        <p><strong>Message:</strong> ${message}</p>
+        <p><strong>WhatsApp:</strong> ${whatsapp}</p>
+        <p><strong>You are:</strong> ${role}</p>
+        <p><strong>Commodity:</strong> ${commodity}</p>
+        <p><strong>Origin / Location:</strong> ${originLocation}</p>
+        <p><strong>Volume:</strong> ${volume}</p>
+        <p><strong>Documentation Available:</strong> ${documentationAvailable}</p>
+        <p><strong>Brief Overview:</strong></p>
+        <p>${overview}</p>
       `,
     });
 

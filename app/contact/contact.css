@@ -56,6 +56,14 @@
   margin-top: 24px;
 }
 
+.contact-subheading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #767676;
+  margin-top: 14px;
+}
+
 .c-rule {
   width: 100%;
   height: 1px;
@@ -124,6 +132,37 @@
 
 .form-submit:hover { background: #C8000A; }
 .form-submit:disabled { background: #888; cursor: not-allowed; }
+
+.form-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+  padding-top: 4px;
+}
+
+.form-radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  color: #0A0A0A;
+  cursor: pointer;
+}
+
+.form-radio-option input {
+  margin: 0;
+  accent-color: #C8000A;
+  cursor: pointer;
+}
+
+.form-confidential {
+  margin-top: 18px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 11px;
+  font-style: italic;
+  color: #767676;
+}
 
 .form-error {
   font-size: 11px;

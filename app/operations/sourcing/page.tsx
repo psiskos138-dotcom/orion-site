@@ -10,26 +10,8 @@ export default function SourcingPage() {
   return (
     <div className="ops-doc">
       <header className="ops-header">
-        <a href="/" className="ops-back">
-          Physical commodity trading<br />
-          New York &nbsp;·&nbsp; Principal. Not broker.
-        </a>
-        <div className="ops-section-ref">
-          Sourcing &amp; Delivery
-        </div>
+        <a href="/" className="ops-back">← Overview</a>
       </header>
-
-      <div className="ops-lockup">
-        <div className="ops-rs-1" aria-hidden="true" />
-        <div className="ops-rs-2" aria-hidden="true" />
-        <div className="ops-rs-3" aria-hidden="true" />
-        <span className="ops-wordmark">ORION</span>
-        <div className="ops-sub-row">
-          <span className="ops-sub-tl">Trade &amp; Logistics</span>
-          <span className="ops-sub-llc">LLC &nbsp;·&nbsp; New York</span>
-        </div>
-        <div className="ops-lockup-rule" aria-hidden="true" />
-      </div>
 
       <main className="ops-body">
         <div className="ops-provision">
@@ -37,15 +19,27 @@ export default function SourcingPage() {
           <div>
             <h1 className="ops-heading">Sourcing &amp; Delivery</h1>
             <p className="ops-text">
-              We manage complex supply chains — moving physical commodities from
-              where they are produced to where they are needed. On the ground at
-              origin, we build direct relationships with producers and understand
-              the supply before we commit to it. Every transaction begins with
-              presence.
+              We operate at origin. Before committing to any transaction, we
+              establish direct contact with producers and aggregators —
+              verifying supply, understanding the underlying flow, and
+              assessing conditions on the ground.
+            </p>
+            <p className="ops-text">
+              We do not rely on intermediary representations. Verification is
+              conducted independently.
+            </p>
+            <p className="ops-text">
+              From origin through final delivery, movement and documentation
+              are controlled in-house. Settlement is clean.
             </p>
           </div>
         </div>
       </main>
+
+      <nav className="ops-bottom-nav">
+        <a href="/" className="ops-back">← Overview</a>
+        <a href="/operations/compliance" className="ops-back">§2 Due Diligence &amp; Compliance →</a>
+      </nav>
 
       <footer className="ops-colophon">
         <span className="ops-col-l">Orion Trade &amp; Logistics LLC</span>
