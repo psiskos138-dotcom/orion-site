@@ -77,22 +77,19 @@
 }
 
 .form-row {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 0 12px;
   border-top: 1px solid #EBEBEB;
   padding: 20px 0;
-  align-items: start;
 }
 
 .form-row:last-of-type { border-bottom: 1px solid #EBEBEB; }
 
 .form-label {
+  display: block;
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 11px;
   color: #C8000A;
   font-style: italic;
-  padding-top: 4px;
+  margin-bottom: 5px;
 }
 
 .form-input {
@@ -103,10 +100,12 @@
   outline: none;
   background: transparent;
   width: 100%;
+  max-width: 400px;
   line-height: 1.6;
 }
 
 .form-textarea {
+  max-width: 100%;
   resize: vertical;
   min-height: 120px;
 }
@@ -138,7 +137,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 14px 24px;
-  padding-top: 4px;
 }
 
 .form-radio-option {
@@ -206,7 +204,7 @@
   .contact-header { padding: 20px 24px; }
   .contact-wrap { padding: 0 24px; }
   .contact-footer { padding: 20px 24px 0; }
-  .form-row { grid-template-columns: 80px 1fr; gap: 0 10px; }
+  .form-input { max-width: 100%; }
 }
 
 .form-input:focus {
