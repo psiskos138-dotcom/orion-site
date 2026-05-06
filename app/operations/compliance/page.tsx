@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import '../ops.css';
 
 export const metadata: Metadata = {
-  title: 'Due Diligence & Compliance — Orion Trade & Logistics LLC',
-  description: 'Every counterparty we engage is fully verified before a transaction moves forward. KYC is completed. Licenses are checked. Documentation is confirmed valid.',
+  title: 'Mandate & Standards — Orion Trade & Logistics LLC',
+  description: 'We take on mandates selectively. Before accepting an engagement, we assess counterparty standing, transaction capacity, and whether the terms are executable in practice — not just on paper.',
 };
 
 export default function CompliancePage() {
@@ -17,30 +17,28 @@ export default function CompliancePage() {
         <div className="ops-provision">
           <div className="ops-prov-num">§ 2.</div>
           <div>
-            <h1 className="ops-heading">Due Diligence &amp; Compliance</h1>
+            <h1 className="ops-heading">Mandate &amp; Standards</h1>
             <p className="ops-text">
-              We operate under US law. OFAC sanctions requirements apply to
-              every transaction, regardless of origin or destination.
+              We take on mandates selectively. Before accepting an
+              engagement, we assess counterparty standing, transaction
+              capacity, and whether the terms are executable in practice
+              — not just on paper.
             </p>
             <p className="ops-text">
-              All counterparties — suppliers, aggregators, refineries, and
-              buyers — are subject to KYC review prior to engagement.
-              Licenses, documentation, and transaction history are verified
-              before any deal proceeds.
+              All counterparties are subject to review prior to engagement.
+              We verify licenses, documentation, and transaction history
+              before any deal moves forward.
             </p>
             <p className="ops-text">
-              Areas of focus include anti-money laundering, sanctions
-              compliance, and provenance verification at origin.
-            </p>
-            <p className="ops-text">
-              We do not proceed until we are satisfied.
+              We bring terms worth considering. We do not advance a deal
+              we cannot close.
             </p>
           </div>
         </div>
       </main>
 
       <nav className="ops-bottom-nav">
-        <a href="/operations/sourcing" className="ops-back">← §1 Sourcing &amp; Delivery</a>
+        <a href="/operations/sourcing" className="ops-back">← §1 Sourcing &amp; Coordination</a>
         <a href="/operations/structuring" className="ops-back">§3 Structuring &amp; Execution →</a>
       </nav>
 

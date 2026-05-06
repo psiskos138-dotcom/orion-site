@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import '../ops.css';
 
 export const metadata: Metadata = {
-  title: 'Sourcing & Delivery — Orion Trade & Logistics LLC',
-  description: 'We go to the source. Our representatives operate on the ground in the markets we trade — building relationships directly with producers, understanding the supply before we commit to it.',
+  title: 'Sourcing & Coordination — Orion Trade & Logistics LLC',
+  description: 'We operate under mandate. Before engaging any transaction, we establish the terms of our representation — buyer-side, supplier-side, or both — and define the scope of our role before any counterparty contact is made.',
 };
 
 export default function SourcingPage() {
@@ -17,20 +17,21 @@ export default function SourcingPage() {
         <div className="ops-provision">
           <div className="ops-prov-num">§ 1.</div>
           <div>
-            <h1 className="ops-heading">Sourcing &amp; Delivery</h1>
+            <h1 className="ops-heading">Sourcing &amp; Coordination</h1>
             <p className="ops-text">
-              We operate at origin. Before committing to any transaction, we
-              establish direct contact with producers and aggregators —
-              verifying supply, understanding the underlying flow, and
-              assessing conditions on the ground.
+              We operate under mandate. Before engaging any transaction, we
+              establish the terms of our representation — buyer-side,
+              supplier-side, or both — and define the scope of our role
+              before any counterparty contact is made.
             </p>
             <p className="ops-text">
-              We do not rely on intermediary representations. Verification is
-              conducted independently.
+              On the ground at origin, we establish direct contact with
+              producers and aggregators, verifying supply and understanding
+              the underlying flow before presenting anything to a buyer.
             </p>
             <p className="ops-text">
-              From origin through final delivery, movement and documentation
-              are controlled in-house. Settlement is clean.
+              We coordinate movement and documentation from origin through
+              closing. We do not represent what we have not verified.
             </p>
           </div>
         </div>
@@ -38,7 +39,7 @@ export default function SourcingPage() {
 
       <nav className="ops-bottom-nav">
         <a href="/" className="ops-back">← Overview</a>
-        <a href="/operations/compliance" className="ops-back">§2 Due Diligence &amp; Compliance →</a>
+        <a href="/operations/compliance" className="ops-back">§2 Mandate &amp; Standards →</a>
       </nav>
 
       <footer className="ops-colophon">

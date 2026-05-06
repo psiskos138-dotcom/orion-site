@@ -35,12 +35,10 @@ export default function Home() {
 
         <header id="doc-header" className="doc-header">
           <div className="doc-ref">
-            Physical Commodity Trading · Metals · Select Commodities<br />
-            New York &nbsp;·&nbsp; Principal. Not broker.
+            Physical Metals Agency &nbsp;·&nbsp; New York
           </div>
           <div className="doc-status">
-            US-governed<br />
-            <span className="live">OFAC compliant</span>
+            US-Governed.
           </div>
         </header>
 
@@ -60,27 +58,27 @@ export default function Home() {
           <Link href="/operations/sourcing" className="provision">
             <div className="prov-num">§ 1.</div>
             <div className="prov-body">
-              We source, structure, and deliver physical metals — precious
-              metals and select secondary materials — from origin to
-              destination, as principal, on every deal.
+              We represent buyers and suppliers of physical metals —
+              acting under defined mandate to source, coordinate, and
+              structure transactions from origin to closing.
             </div>
           </Link>
           <Link href="/operations/compliance" className="provision">
             <div className="prov-num">§ 2.</div>
             <div className="prov-body">
-              We are not a broker. We do not split exposure.{' '}
-              <em>Patience. Discretion. Execution.</em> These are not
-              aspirations — they are the minimum standard by which{' '}
-              Orion operates in every market it enters.
+              Independent. Selective. We take on mandates we can
+              execute, bring terms worth considering, and do not advance
+              a deal we cannot close.
             </div>
           </Link>
           <Link href="/operations/structuring" className="provision">
             <div className="prov-num">§ 3.</div>
             <div className="prov-body">
-              Our model is built on direct relationships — on-the-ground
-              at origin, controlled in-house through documentation and
-              structuring, clean at settlement.{' '}
-              <span className="dt">US-governed. OFAC compliant.</span>{' '}
+              Our network spans producers, aggregators, refineries, and
+              institutional buyers. Every engagement is reviewed for
+              counterparty standing, transaction capacity, and documented
+              commercial terms before we proceed.{' '}
+              <span className="dt">US-Governed.</span>{' '}
               New York LLC.
             </div>
           </Link>
