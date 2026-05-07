@@ -48,7 +48,6 @@ export default function Home() {
           <div className="rs-3" id="rs3" aria-hidden="true" />
           <span className="wordmark" id="wordmark">ORION</span>
           <div className="sub-row" id="sub-row">
-            <span className="sub-tl">Trade &amp; Logistics</span>
             <span className="sub-llc" id="sub-llc">LLC &nbsp;·&nbsp; New York</span>
           </div>
           <div className="lockup-rule" id="lockup-rule" aria-hidden="true" />
